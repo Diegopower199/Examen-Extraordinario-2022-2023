@@ -1,0 +1,12 @@
+FROM denoland/deno:1.35.0
+
+# COPY EVERYTHING FROM THE CURRENT DIRECTORY TO THE CONTAINER
+COPY . /app
+
+# SET THE WORKING DIRECTORY TO /app
+WORKDIR /app
+
+EXPOSE 4000
+
+# EXEC deno task start
+CMD ["deno", "task", "start"]
